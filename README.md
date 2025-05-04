@@ -3,6 +3,9 @@
 
 This application helps convert Base64 encoded strings into QR Codes by decoding Base64 into text then creating a QR Code
 
+![image](https://github.com/user-attachments/assets/39a7c31a-a72d-4a2a-9fcd-c3d117f49d6a)
+
+
 
 ### Supported Devices:
 - Windows 
