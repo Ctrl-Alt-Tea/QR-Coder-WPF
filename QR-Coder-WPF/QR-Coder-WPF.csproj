@@ -41,4 +41,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Portable Install\" />
+  </ItemGroup>
+
 </Project>
