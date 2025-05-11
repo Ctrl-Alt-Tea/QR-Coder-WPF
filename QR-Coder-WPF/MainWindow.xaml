@@ -5,24 +5,37 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QR_Coder_WPF"
         mc:Ignorable="d"
-        Title="QR Coder" Height="450" Width="800" Icon="/favicon.ico" ResizeMode="CanMinimize" WindowStyle="ThreeDBorderWindow">
-    <Grid>
-        <Label x:Name="welcomeLabel" Content="QR Coder" HorizontalAlignment="Left" Margin="2,0,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="MV Boli"/>
-        <TextBlock HorizontalAlignment="Left" Margin="582,386,0,0" VerticalAlignment="Top" FontSize="14">
+        Title="QR Coder" Height="584" Width="800" Icon="/favicon.ico" ResizeMode="CanMinimize" WindowStyle="ThreeDBorderWindow">
+    <Grid Margin="0,0,0,13">
+        <Label x:Name="welcomeLabel" Content="QR Coder" HorizontalAlignment="Left" Margin="8,2,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="MV Boli"/>
+        <TextBlock HorizontalAlignment="Left" Margin="591,425,0,0" VerticalAlignment="Top" FontSize="14">
             <Hyperlink NavigateUri="https://github.com/Ctrl-Alt-Tea" RequestNavigate="Hyperlink_RequestNavigate">
                 Follow on GitHub: Ctrl-Alt-Tea
             </Hyperlink>
+            <Grid Margin="20">
+                <Label Margin="0,10,0,0"/>
+                <Button Margin="0,10,0,0"/>
+            </Grid>
+            
         </TextBlock>
         <RadioButton x:Name="base64Option" Content="Base64 to QR Code" HorizontalAlignment="Left" Margin="52,87,0,0" VerticalAlignment="Top" IsChecked="True"/>
         <RadioButton x:Name="textOption" Content="Text/URL to QR Code" HorizontalAlignment="Left" Margin="52,107,0,0" VerticalAlignment="Top"/>
         <RadioButton x:Name="wifiOption" Content="Wifi Password to QR Code" HorizontalAlignment="Left" Margin="52,127,0,0" VerticalAlignment="Top"/>
         <Label Content="What type of QR Code would you like to create:" HorizontalAlignment="Left" Margin="10,56,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="29,185,0,0" TextWrapping="Wrap" Text="QR Code string" VerticalAlignment="Top" Width="706" Height="22"/>
+        <TextBox x:Name="txtInput" HorizontalAlignment="Left" Margin="29,185,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="706" Height="55"/>
         <Label Content="Text to encode into QR Code:" HorizontalAlignment="Left" Margin="10,154,0,0" VerticalAlignment="Top" FontSize="14"/>
-        <Image x:Name="pictureBoxQRCode" HorizontalAlignment="Left" Height="205" Margin="272,217,0,0" VerticalAlignment="Top" Width="245" RenderTransformOrigin="0.527,0.502"/>
-        <Button x:Name="btnGenerate" Content="Generate QR Code" HorizontalAlignment="Left" Margin="29,245,0,0" VerticalAlignment="Top" Height="60" Width="110" Background="ForestGreen" Foreground="White"/>
-        <Button x:Name="btnCopy" Content="Copy QR Code" HorizontalAlignment="Left" Margin="29,308,0,0" VerticalAlignment="Top" Height="30" Width="110" Click="btnCopy_Click" Background="SteelBlue" Foreground="White"/>
-        <Button x:Name="btnSave" Content="Save QR Code" HorizontalAlignment="Left" Margin="29,371,0,0" VerticalAlignment="Top" Height="30" Width="110" Click="btnSave_Click" Background="SteelBlue" Foreground="White"/>
+        <Image x:Name="pictureBoxQRCode" HorizontalAlignment="Left" Height="205" Margin="279,265,0,0" VerticalAlignment="Top" Width="245" RenderTransformOrigin="0.494,0.499">
+            <Image.Effect>
+                <DropShadowEffect ShadowDepth="0" Color="Black" BlurRadius="0" Opacity="1"/>
+            </Image.Effect>
+        </Image>
+        <Button x:Name="btnGenerate" Content="Generate QR Code" HorizontalAlignment="Left" Margin="117,304,0,0" VerticalAlignment="Top" Height="60" Width="124" Background="ForestGreen" Foreground="White" RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="btnCopy" Content="Copy QR Code" HorizontalAlignment="Left" Margin="117,367,0,0" VerticalAlignment="Top" Height="30" Width="124" Click="btnCopy_Click" Background="SteelBlue" Foreground="White"/>
+        <Button x:Name="btnSave" Content="Save QR Code" HorizontalAlignment="Left" Margin="117,430,0,0" VerticalAlignment="Top" Height="30" Width="124" Click="btnSave_Click" Background="SteelBlue" Foreground="White"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="676,2,0,0" VerticalAlignment="Top" Width="100" Source="/Logo.png" Opacity="0.18"/>
+        <StatusBar Margin="0,504,0,0">
+            <TextBlock x:Name="statusMessage" Text="Ready" VerticalAlignment="Center"/>
+        </StatusBar>
 
     </Grid>
 </Window>

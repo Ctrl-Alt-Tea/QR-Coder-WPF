@@ -1,4 +1,14 @@
-﻿using Microsoft.Win32;
+﻿// QR Coder Created by Ctrl-Alt-Tea
+
+// This is a simple WPF application that generates QR codes based on user input.
+
+// It supports three modes: Base64 to text, plain text, and Wi-Fi credentials.
+// The application allows users to generate, copy, and save QR codes.
+
+// The application uses the QRCoder library for QR code generation and System.Windows.Media.Imaging for image handling.
+
+
+using Microsoft.Win32;
 using QRCoder;
 using System;
 using System.Drawing;
@@ -29,17 +39,20 @@ namespace QR_Coder_WPF
                 {
                     byte[] base64Bytes = Convert.FromBase64String(input);
                     qrData = Encoding.UTF8.GetString(base64Bytes);
+                    UpdateStatus("QR Code created successfully!");
                 }
                 catch (FormatException)
                 {
-                    MessageBox.Show("Invalid Base64 string.");
+                    UpdateStatus("Invalid Base64 string.");
                     return;
                 }
+
             }
             else if (textOption.IsChecked == true)
             {
                 // Option 2: Use text as is
                 qrData = input;
+                UpdateStatus("QR Code created successfully!");
             }
             else if (wifiOption.IsChecked == true)
             {
@@ -47,10 +60,12 @@ namespace QR_Coder_WPF
                 var parts = input.Split(';');
                 if (parts.Length < 2)
                 {
-                    MessageBox.Show("Invalid Wi-Fi input. Please provide in format 'SSID;Password' without qoutes.");
+                    UpdateStatus("Invalid Wi-Fi input. Please provide in format 'SSID;Password' without quotes.");
                     return;
                 }
+
                 qrData = $"WIFI:T:WPA;S:{input.Split(';')[0]};P:{input.Split(';')[1]};;";
+                UpdateStatus("QR Code created successfully!");
             }
 
             GenerateQRCode(qrData);
@@ -95,11 +110,11 @@ namespace QR_Coder_WPF
                 // Convert BitmapImage to Bitmap for clipboard
                 BitmapSource bitmapSource = (BitmapSource)pictureBoxQRCode.Source;
                 Clipboard.SetImage(bitmapSource);
-                MessageBox.Show("QR Code copied to clipboard!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                UpdateStatus("QR Code copied to clipboard!");
             }
             else
             {
-                MessageBox.Show("No QR Code to copy. Please generate one first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                UpdateStatus("No QR Code to copy. Please generate one first.");
             }
         }
 
@@ -127,17 +142,17 @@ namespace QR_Coder_WPF
                             encoder.Save(fileStream);
                         }
 
-                        MessageBox.Show("QR Code saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                        UpdateStatus("QR Code saved successfully!");
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show($"An error occurred while saving the file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        UpdateStatus($"An error occurred while saving the file: {ex.Message}");
                     }
                 }
             }
             else
             {
-                MessageBox.Show("No QR Code to save. Please generate one first.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                UpdateStatus("No QR Code to save. Please generate one first.");
             }
         }
 
@@ -149,6 +164,10 @@ namespace QR_Coder_WPF
                 UseShellExecute = true // Ensures the URL opens in the default browser
             });
             e.Handled = true;
+        }
+        private void UpdateStatus(string message)
+        {
+            statusMessage.Text = message;
         }
 
     }
