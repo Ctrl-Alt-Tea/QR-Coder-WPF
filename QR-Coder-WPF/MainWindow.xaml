@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QR_Coder_WPF"
         mc:Ignorable="d"
-        Title="QR Coder" Height="584" Width="800" Icon="/favicon.ico" ResizeMode="CanMinimize" WindowStyle="ThreeDBorderWindow">
+        Title="QR Coder" Height="613" Width="800" Icon="/favicon.ico" ResizeMode="CanMinimize" WindowStyle="ThreeDBorderWindow">
     <Grid Margin="0,0,0,13">
         <Label x:Name="welcomeLabel" Content="QR Coder" HorizontalAlignment="Left" Margin="8,2,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="MV Boli"/>
         <TextBlock HorizontalAlignment="Left" Margin="591,425,0,0" VerticalAlignment="Top" FontSize="14">
@@ -33,7 +33,7 @@
         <Button x:Name="btnCopy" Content="Copy QR Code" HorizontalAlignment="Left" Margin="117,367,0,0" VerticalAlignment="Top" Height="30" Width="124" Click="btnCopy_Click" Background="SteelBlue" Foreground="White"/>
         <Button x:Name="btnSave" Content="Save QR Code" HorizontalAlignment="Left" Margin="117,430,0,0" VerticalAlignment="Top" Height="30" Width="124" Click="btnSave_Click" Background="SteelBlue" Foreground="White"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="676,2,0,0" VerticalAlignment="Top" Width="100" Source="/Logo.png" Opacity="0.18"/>
-        <StatusBar Margin="0,504,0,0">
+        <StatusBar Margin="0,511,0,0">
             <TextBlock x:Name="statusMessage" Text="Ready" VerticalAlignment="Center"/>
         </StatusBar>
 
