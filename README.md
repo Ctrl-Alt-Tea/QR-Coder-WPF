@@ -16,10 +16,12 @@ The following QR Code types are supported:
 ### Supported Devices:
 - Windows
 
-Feel free to drop any suggestions or bug reports
+Feel free to drop any suggestions or bug reports (dylanrose.sa@gmail.com)
 
 
 ### Support the project:
+<a href="[https://www.buymeacoffee.com/dylanrose](https://zapper.com/url/35YuJE2wk3)" target="_blank"><img src="https://www.zapper.com/wp-content/uploads/2023/08/Zapper-Logo.png" alt="Donate Via Zapper" style="height: 60px !important;width: 217px !important;" ></a>
+
 <a href="https://www.buymeacoffee.com/dylanrose" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
  
 
