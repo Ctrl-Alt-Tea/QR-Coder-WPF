@@ -20,7 +20,7 @@ Feel free to drop any suggestions or bug reports (dylanrose.sa@gmail.com)
 
 
 ### Support the project:
-<a href="https://zapper.com/url/35YuJE2wk3" target="_blank"><img src="https://www.zapper.com/wp-content/uploads/2023/08/Zapper-Logo.png" alt="Donate Via Zapper" style="height: 60px !important;width: 217px !important;" ></a>
+<a href="https://www.zapper.com/payWithZapper/?qr=http%3A%2F%2F2.zap.pe%3Ft%3D6%26i%3D64641%3A82254%3A7%5B34%7C0%2C33n%7CWebsite%20Donation%7C11%7CReference%3A10%5B39%7CZAR%2C38%7CDylans%20Store" target="_blank"><img src="https://www.zapper.com/wp-content/uploads/2023/08/Zapper-Logo.png" alt="Donate Via Zapper" style="height: 60px !important;width: 217px !important;" ></a>
 
 <a href="https://www.buymeacoffee.com/dylanrose" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
  
