@@ -8,15 +8,15 @@
         Title="QR Coder" Height="613" Width="800" Icon="/favicon.ico" ResizeMode="CanMinimize" WindowStyle="ThreeDBorderWindow">
     <Grid Margin="0,0,0,13">
         <Label x:Name="welcomeLabel" Content="QR Coder" HorizontalAlignment="Left" Margin="8,2,0,0" VerticalAlignment="Top" FontSize="36" FontFamily="MV Boli"/>
-        <TextBlock HorizontalAlignment="Left" Margin="591,425,0,0" VerticalAlignment="Top" FontSize="14">
-            <Hyperlink NavigateUri="https://github.com/Ctrl-Alt-Tea" RequestNavigate="Hyperlink_RequestNavigate">
-                Follow on GitHub: Ctrl-Alt-Tea
+        <TextBlock HorizontalAlignment="Left" Margin="629,430,0,0" VerticalAlignment="Top" FontSize="14" Width="152" Height="76">
+            <Hyperlink NavigateUri="https://roses.net.za/index.html" RequestNavigate="Hyperlink_RequestNavigate">
+                Created by Dylan Rose
             </Hyperlink>
             <Grid Margin="20">
                 <Label Margin="0,10,0,0"/>
                 <Button Margin="0,10,0,0"/>
             </Grid>
-            
+
         </TextBlock>
         <RadioButton x:Name="base64Option" Content="Base64 to QR Code" HorizontalAlignment="Left" Margin="52,87,0,0" VerticalAlignment="Top" IsChecked="True"/>
         <RadioButton x:Name="textOption" Content="Text/URL to QR Code" HorizontalAlignment="Left" Margin="52,107,0,0" VerticalAlignment="Top"/>
